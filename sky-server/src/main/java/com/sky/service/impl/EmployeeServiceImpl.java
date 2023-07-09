@@ -166,6 +166,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void editPassword(PasswordEditDTO passwordEditDTO) {
         //根据id去数据库里拿信息
         Employee employee = employeeMapper.getById(BaseContext.getCurrentId());
+        //如果数据库中没有该用户，密码修改失败
+        if (null == employee){
+            throw new PasswordErrorException(MessageConstant.PASSWORD_EDIT_FAILED);
+        }
         //判断输入的oldPassword是否与数据库里password是否一致
         //首先要将oldPassword进行MD5加密才能进行比较
         String password = DigestUtils.md5DigestAsHex(passwordEditDTO.getOldPassword().getBytes());

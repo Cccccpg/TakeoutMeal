@@ -12,3 +12,21 @@ sky:
     access-key-id: LTAI5tQhVfuuJoMJg47eicRM
     access-key-secret: 7BAmXvTlGQKvTqJnXyydmvZ0RrVFxp
     bucket-name: appointment-register-cpg
+
+  redis:
+    host: 132.232.109.118
+    port: 6379
+    password: 199908Cpg
+    database: 0
+
+  wechat:
+    appid: wxf2de8b1710f72538
+    secret: a77c98112b22dccfa3787a672d6483e1
+
+    mchid : 1558950191
+    mchSerialNo: 3A7DCC2CC0DD913218953A39DCD281176ED63F4C
+    privateKeyFilePath: E:\StudyFiles\sky-take-out\sky-server\src\main\resources\cert\apiclient_key.pem
+    apiV3Key: T6m9iK73b0kn9g5v426MKfHQH7X8rKwb
+    weChatPayCertFilePath: E:\StudyFiles\sky-take-out\sky-server\src\main\resources\cert\apiclient_cert.pem
+    notifyUrl: https://1cfd8261.r7.cpolar.top/notify/paySuccess
+    refundNotifyUrl: https://1cfd8261.r7.cpolar.top/notify/refundSuccess
